@@ -1,0 +1,6 @@
+ALTER TABLE address
+  ADD COLUMN phone VARCHAR(20) NULL COMMENT '联系电话' AFTER email,
+  ADD COLUMN province VARCHAR(50) NULL COMMENT '省' AFTER detail,
+  ADD COLUMN city VARCHAR(50) NULL COMMENT '市' AFTER province,
+  ADD COLUMN district VARCHAR(50) NULL COMMENT '区' AFTER city,
+  ADD COLUMN postal_code VARCHAR(20) NULL COMMENT '邮政编码' AFTER district;

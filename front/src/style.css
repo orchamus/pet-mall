@@ -1,0 +1,165 @@
+:root {
+  /* 萌宠乐园 · Web 端设计 Tokens */
+  --pet-primary: #FF7A45;
+  --pet-primary-light: #FF9E6D;
+  --pet-primary-dark: #E86A35;
+  --pet-primary-soft: #FFF5F0;
+
+  --pet-pink: #FFB6C1;
+  --pet-green: #4CAF50;
+  --pet-yellow: #FFC107;
+  --pet-blue: #5B8FF9;
+  --pet-purple: #9C6ADE;
+
+  --pet-text: #2C2C2C;
+  --pet-text-secondary: #666666;
+  --pet-text-grey: #999999;
+  --pet-text-placeholder: #BFBFBF;
+
+  --pet-bg: #FAF8F5;
+  --pet-bg-white: #FFFFFF;
+  --pet-bg-grey: #F5F5F5;
+  --pet-bg-hover: #FFF5F0;
+
+  --pet-border: #EEEEEE;
+  --pet-divider: #E8E8E8;
+
+  --pet-error: #FF4D4F;
+  --pet-success: #4CAF50;
+  --pet-warning: #FFC107;
+
+  --pet-radius-sm: 6px;
+  --pet-radius-base: 12px;
+  --pet-radius-lg: 18px;
+  --pet-radius-circle: 50%;
+
+  --pet-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --pet-shadow-base: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --pet-shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.12);
+
+  font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--pet-text);
+  background-color: var(--pet-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: var(--pet-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--pet-primary-dark);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--pet-bg);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+button {
+  border-radius: var(--pet-radius-base);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--pet-primary);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+button:hover {
+  background-color: var(--pet-primary-dark);
+  box-shadow: var(--pet-shadow-base);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(255, 122, 69, 0.3);
+}
+
+.card {
+  padding: 1.5em;
+  background: var(--pet-bg-white);
+  border-radius: var(--pet-radius-base);
+  box-shadow: var(--pet-shadow-sm);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+/* Element Plus 主题覆盖 */
+.el-button--primary {
+  --el-button-bg-color: var(--pet-primary);
+  --el-button-border-color: var(--pet-primary);
+  --el-button-hover-bg-color: var(--pet-primary-dark);
+  --el-button-hover-border-color: var(--pet-primary-dark);
+}
+
+.el-button--primary.is-plain {
+  --el-button-bg-color: var(--pet-primary-soft);
+  --el-button-border-color: var(--pet-primary);
+  --el-button-text-color: var(--pet-primary);
+  --el-button-hover-bg-color: var(--pet-primary);
+  --el-button-hover-border-color: var(--pet-primary);
+  --el-button-hover-text-color: #fff;
+}
+
+.el-input__wrapper.is-focus {
+  --el-input-focus-border-color: var(--pet-primary);
+  box-shadow: 0 0 0 1px var(--pet-primary) inset !important;
+}
+
+.el-carousel__indicator.is-active .el-carousel__button {
+  background-color: var(--pet-primary);
+}
+
+.el-tooltip__trigger:focus-visible {
+  outline: unset;
+}
+
+.el-button:focus {
+  outline: none;
+}
+
+/* 通用隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pet-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
